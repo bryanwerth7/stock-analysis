@@ -9,7 +9,17 @@
 ## 2017
 <img width="1000" alt="Screen Shot 2021-07-17 at 1 37 00 PM" src="https://user-images.githubusercontent.com/86524863/126045359-4b0ddb0e-659a-4afc-b2b1-0f1eced8f91c.png">
     
-   -As we can see, 2017 was a very good year in regards to a positive returns for all the stocks except TERP. Some had a positive return of almost 200% in the case of DQ. This was a lot of data to analyze so it was crucial to refactor my base code I used to analyze one stock (DQ), so it was efficient and ran the entire year as quickly as possible. My original base code program ran in 0.8 seconds, as you can see below with refactoring my code now runs in about a fifth of that time:
+   -As we can see, 2017 was a very good year in regards to a positive returns for all the stocks except TERP. Some had a positive return of almost 200% in the case of DQ. This was a lot of data to analyze so it was crucial to refactor my base code I used to analyze one stock (DQ), so it was efficient and ran the entire year as quickly as possible. To differentiate between multiple tickers I had to check if the next row was the first row to contain that stocks ticker with the code below:
+   
+   >***If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1) <> tickers(tickerIndex) Then
+        tickerStartingPrices(tickerIndex) = Cells(i, 6).Value***
+
+   -Then to make sure we stopped at the last row containing that ticker I had code that read as follows:
+   
+   >***If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1) <> tickers(tickerIndex) Then
+        tickerEndingPrices(tickerIndex) = Cells(i, 6).Value***
+  
+   -If these conditions were met, our tickerIndex would increase by 1; this was how we tallied up the individual ticker information row by row and compiled the data for individual stocks for the entire year desired. My original base code program ran in 0.8 seconds, as you can see below with refactoring my code now runs in about a fifth of that time:
 
 <img width="1417" alt="VBA_Challenge_2017" src="https://user-images.githubusercontent.com/86524863/126045399-04a2be8a-eb78-459d-83e4-1c9f06bf98f3.png">
 
@@ -28,6 +38,6 @@
    1. When you start a project, the main goal is to make sure you can get the code to do exactly what you want it to do- fixing bugs, syntax, and typo errors. It is very important to not stop there though, a code should always be reanalyzed after the first attempt at writing it to try and increase the efficiency and reduce the chance of errors while running it. After finishing a project it's very important to step back, look at the code as a whole, and analyze how the code was written from start to finish and see where improvements can be made. Oftentimes as we write the code we get better as we go along and we can apply those new efficient methods to improve the code before it. The only pitfall to try and avoid can be rewriting code that you think will make it more efficient, but changes the outcome of the analysis to something unintended. Always make sure you haven't affected the integrity of the results when making improvements. 
    2. Originally our code analyzed one particular stock- in the refactored code we looked at a whole year of information containing 12 different stocks and all of their data. This gives our refactored code more utility and scalability. We get a broader picture of multiple stocks in a given year. We also made our code run more efficiently thus saving time- a half a second may not seem long but if this calculation was scaled up and done multiple times for more stocks or with more information, the time saving would be immense over multiple calculations. Refactoring always has to be done carefully and correctly to make sure the initial integrity of our code wasn't compromised unexpectedly. 
 
-The stock market can be a volatile place, but with the correct amount of caution and perspective you can turn a great return into profit, and a downward slide into an investment opportunity. Keep at it! 
+**The stock market can be a volatile place, but with the correct amount of caution and perspective you can turn a great return into profit, and a downward slide into an investment opportunity. Keep at it!** 
 
 
