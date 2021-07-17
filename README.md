@@ -6,20 +6,21 @@
 ## Results
    - I ran the refactored code through the years of 2017 and 2018 to compare the difference in performance in the two years. Let's start with 2017 and look at the results below:
 
-### 2017
-Screen Shot 2021-07-17 at 1.37.00 PM.png<img width="1000" alt="Screen Shot 2021-07-17 at 1 37 00 PM" src="https://user-images.githubusercontent.com/86524863/126045359-4b0ddb0e-659a-4afc-b2b1-0f1eced8f91c.png">
+## 2017
+<img width="1000" alt="Screen Shot 2021-07-17 at 1 37 00 PM" src="https://user-images.githubusercontent.com/86524863/126045359-4b0ddb0e-659a-4afc-b2b1-0f1eced8f91c.png">
     
    -As we can see, 2017 was a very good year in regards to a positive returns for all the stocks except TERP. Some had a positive return of almost 200% in the case of DQ. This was a lot of data to analyze so it was crucial to refactor my base code I used to analyze one stock (DQ), so it was efficient and ran the entire year as quickly as possible. My original base code program ran in 0.8 seconds, as you can see below with refactoring my code now runs in about a fifth of that time:
 
-VBA_Challenge_2017.png<img width="1417" alt="VBA_Challenge_2017" src="https://user-images.githubusercontent.com/86524863/126045399-04a2be8a-eb78-459d-83e4-1c9f06bf98f3.png">
+<img width="1417" alt="VBA_Challenge_2017" src="https://user-images.githubusercontent.com/86524863/126045399-04a2be8a-eb78-459d-83e4-1c9f06bf98f3.png">
 
-### 2018
 
-Screen Shot 2021-07-17 at 1.37.31 PM.png<img width="1000" alt="Screen Shot 2021-07-17 at 1 37 31 PM" src="https://user-images.githubusercontent.com/86524863/126045387-8a3334a4-a5e7-407a-b643-c0b816daab7c.png">
+## 2018
+
+<img width="1000" alt="Screen Shot 2021-07-17 at 1 37 31 PM" src="https://user-images.githubusercontent.com/86524863/126045387-8a3334a4-a5e7-407a-b643-c0b816daab7c.png">
     
    -Not every year in the stock market can be bullish, and we can see in 2018 the market took a downward turn. We had every stock lose on their return except two: ENPH and RUN. All of the data for the year ran in just under 0.8 seconds using my base code, as you can see below we have greatly improved efficiency by reducing the time to run the macro in just over 0.13 seconds:
 
-VBA_Challenge_2018.png<img width="1413" alt="VBA_Challenge_2018" src="https://user-images.githubusercontent.com/86524863/126045407-639c3e02-a487-479c-9e7b-eccd7cb0ad29.png">
+<img width="1413" alt="VBA_Challenge_2018" src="https://user-images.githubusercontent.com/86524863/126045407-639c3e02-a487-479c-9e7b-eccd7cb0ad29.png">
 
 
 ## Summary
